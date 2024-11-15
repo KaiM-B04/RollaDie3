@@ -3,15 +3,15 @@ let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById('inputField');
 
 addToDoButton.addEventListener('click', function(){
-    var paragraph = document.createElement('p');
-    paragraph.classList.add('paragraph-styling');
-    paragraph.innerText = inputField.value;
-    toDoContainer.appendChild(paragraph);
-    inputField.value = "";
-    paragraph.addEventListener('click', function(){
-        paragraph.style.textDecoration = "line-through";
-    })
-    paragraph.addEventListener('dblclick', function(){
-        toDoContainer.removeChild(paragraph);
-    })
-})
+    const inputText = inputField.value;
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('dynamic-div');
+
+    const newPara = document.createElement ('p');
+    newPara.textContent = inputText;
+
+    newDiv.appendChild(newPara);
+    toDoContainer.appendChild(newDiv);
+
+    inputField.value = '';
+});
