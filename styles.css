@@ -122,10 +122,18 @@ width:100%;
 
 
 .todo-container {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-top: 20px;
   
 }
+
+.dynamic-div {
+  display: block;
+  justify-self: center;
+}
+
 .todo-title {
   font-size: 5vw;
   font-family: 'Jersey25';
